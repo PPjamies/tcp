@@ -4,12 +4,9 @@ use std::io::{Error, Read, Result, Write};
 use std::net::SocketAddr;
 
 // connections are added to a queue on the OS - typically the queue size is 128
-
 // the number of sockets a server can open depends on:
 // OS file descriptor limit, memory, server configurations, OS network stack
-
 // total # of buffers are limited to RAM
-
 // local IP + local port + remote IP + remote port = socket address
 
 fn main() -> Result<()> {
